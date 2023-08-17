@@ -1,3 +1,49 @@
-<ng-container *ngIf="showTable">
-  <app-table-data [dolarValue]="dolarValue" [wowToken]="wowToken" class="d-flex flex-column min-vh-100"/>
-</ng-container>
+<main class="d-flex flex-column h-100" *ngIf="showTable; else spinner">
+  <header class="header d-flex justify-content-center text-center py-3">
+    <h1 class="fs-2">Valor de Oro de World of Warcraft en Peso Argentino</h1>
+  </header>
+  <div class="container">
+    <section class="row mb-2">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <app-table-data [dolarValue]="dolarValue" [wowToken]="wowToken" />
+      </div>
+    </section>
+    <section class="row mb-2">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <app-calculadora [dolarValue]="dolarValue" [wowToken]="wowToken" />
+      </div>
+    </section>
+    <div class="row d-flex">
+      <picture class="col-auto mx-auto">
+        <img
+          [ngSrc]="imageSrc"
+          width="320"
+          height="428"
+          priority
+          alt="Emblemas de la Horda y la alianza combinados en uno"
+        />
+      </picture>
+    </div>
+  </div>
+  <footer class="footer mt-auto mb-0 pt-3 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg text-center text-lg-start">
+          <p class="text-muted">
+            Valor del dolar actualizado a:
+            {{ dolarValue.last_update | date : "dd/MM/yy HH:mm" }}
+          </p>
+        </div>
+        <div class="col-12 col-lg text-center text-lg-end">
+          <p class="text-muted">
+            Valor de wow token actualizado a:
+            {{ wowToken.last_updated_timestamp | date : "dd/MM/yy HH:mm" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+<ng-template #spinner>
+  <app-spinner />
+</ng-template>

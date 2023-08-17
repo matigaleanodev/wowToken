@@ -1,21 +1,25 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { DataService } from './services/data.service';
 import { Access } from './models/access.model';
 import { combineLatest } from 'rxjs';
 import { TableRates } from './models/currency.model';
 import { TokenInfo } from './models/wow-token.model';
 import { TableDataComponent } from "./components/table-data/table-data.component";
+import { SpinnerComponent } from "./components/spinner/spinner.component";
+import { CalculadoraComponent } from "./components/calculadora/calculadora.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styles: [],
-    imports: [CommonModule, TableDataComponent]
+    imports: [CommonModule, TableDataComponent, SpinnerComponent, NgOptimizedImage, CalculadoraComponent]
 })
 export class AppComponent implements OnInit {
   title = 'wowToken';
+
+  imageSrc = "https://external-preview.redd.it/5GMy4M7EHF4sqzvzqqAjK3wZBCo1XaJtIlXcHHcRrFQ.png?width=640&crop=smart&auto=webp&s=d6135840c58bd2a0eb579987799349c9c12e5317";
 
   showTable: boolean = false;
   dolarValue: TableRates = {} as TableRates;
