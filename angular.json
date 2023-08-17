@@ -58,7 +58,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -126,5 +128,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a3d2a3ed-0385-4078-84d8-97babfc6aee3"
   }
 }

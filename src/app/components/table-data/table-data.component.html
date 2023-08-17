@@ -1,0 +1,74 @@
+<main class="container">
+  <header class="header d-flex justify-content-center py-3">
+    <h1>
+      Valor de Oro de World of Warcraft en Peso Argentino
+    </h1>
+  </header>
+  <div class="row mb-auto">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+      <table class="table mt-2">
+        <thead>
+          <tr>
+            <th scope="col" >Valor Wow Token</th>
+            <td scope="col" class="text-end">{{tokenValue| currency: 'u$s'}}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              Valor Dolar Ofical
+            </th>
+            <td class="text-end">
+              {{ dolarValue.oficial | currency}}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              Valor Dolar Blue
+            </th>
+            <td class="text-end">
+              {{ dolarValue.blue | currency}}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              Wow Token
+            </th>
+            <td class="text-end">
+              {{ wowToken.price / 10000 | number}} <img class="pb-1" src="https://wow.zamimg.com/images/icons/money-gold.gif" alt="">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              Oro por dolar
+            </th>
+            <td class="text-end">
+              {{ dolarGold / 10000 | number:'1.0-2'}} <img class="pb-1" src="https://wow.zamimg.com/images/icons/money-gold.gif" alt="">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              Oro por Peso Argentino
+            </th>
+            <td class="text-end">
+              {{ pesoGold / 10000 | number:'1.0-2'}} <img class="pb-1" src="https://wow.zamimg.com/images/icons/money-gold.gif" alt="">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer class="footer mt-auto mb-0 py-3 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg text-center text-lg-start">
+        <p class="text-muted">Valor del dolar actualizado a: {{dolarValue.last_update | date:"dd/MM/yy HH:mm"}}</p>
+      </div>
+      <div class="col-12 col-lg text-center text-lg-end">
+        <p class="text-muted">Valor de wow token actualizado a: {{wowToken.last_updated_timestamp | date:"dd/MM/yy HH:mm"}}</p>
+      </div>
+    </div>
+  </div>
+</footer>
