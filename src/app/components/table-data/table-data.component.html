@@ -11,19 +11,19 @@
     <tr class="table-info">
       <th scope="col">Valor Wow Token</th>
       <td scope="col" class="text-end">
-        {{ tokenValue | currency : "u$s" }}
+        {{ tokenValue | currency : "USD" }}
       </td>
     </tr>
     <tr class="table-secondary">
       <th scope="row">Valor Dolar Ofical</th>
       <td class="text-end">
-        {{ dolarValue.oficial | currency }}
+        {{ dolarValue.oficial | currency: "ARS" }}
       </td>
     </tr>
     <tr class="table-info">
       <th scope="row">Valor Dolar Blue</th>
       <td class="text-end">
-        {{ dolarValue.blue | currency }}
+        {{ dolarValue.blue | currency: "ARS" }}
       </td>
     </tr>
     <tr class="table-secondary">
