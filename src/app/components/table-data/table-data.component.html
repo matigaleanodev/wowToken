@@ -1,32 +1,32 @@
 
-<table class="table mt-2">
-  <thead>
+<table class="table table-light mt-2">
+  <thead class="border-0 border-bottom">
     <tr>
-      <td class="text-center" colspan="2">
+      <th class="text-center" colspan="2">
         <h3 class="fs-3">Tabla de valores</h3>
-      </td>
+      </th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="table-info">
       <th scope="col">Valor Wow Token</th>
       <td scope="col" class="text-end">
         {{ tokenValue | currency : "u$s" }}
       </td>
     </tr>
-    <tr>
+    <tr class="table-secondary">
       <th scope="row">Valor Dolar Ofical</th>
       <td class="text-end">
         {{ dolarValue.oficial | currency }}
       </td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">Valor Dolar Blue</th>
       <td class="text-end">
         {{ dolarValue.blue | currency }}
       </td>
     </tr>
-    <tr>
+    <tr class="table-secondary">
       <th scope="row">Wow Token</th>
       <td class="text-end">
         {{ wowToken.price / 10000 | number }}
@@ -37,7 +37,7 @@
         />
       </td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">Oro por dolar</th>
       <td class="text-end">
         {{ dolarGold / 10000 | number : "1.0-2" }}
@@ -48,7 +48,7 @@
         />
       </td>
     </tr>
-    <tr>
+    <tr class="table-secondary">
       <th scope="row">Oro por Peso Argentino</th>
       <td class="text-end">
         {{ pesoGold / 10000 | number : "1.0-2" }}
@@ -61,5 +61,6 @@
     </tr>
   </tbody>
 </table>
+
 
 
