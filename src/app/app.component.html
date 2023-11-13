@@ -1,4 +1,5 @@
-<main class="d-flex flex-column h-100" *ngIf="showTable; else spinner">
+@if (showTable) {
+<main class="d-flex flex-column h-100">
   <header class="header d-flex justify-content-center text-center pb-2">
     <h1 class="fs-2">Valor de Oro de World of Warcraft en Peso Argentino</h1>
   </header>
@@ -44,6 +45,9 @@
     </div>
   </footer>
 </main>
-<ng-template #spinner>
+} @else {
+
   <app-spinner />
-</ng-template>
+
+}
+

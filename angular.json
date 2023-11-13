@@ -93,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "valorPesoOro:build:production"
+              "buildTarget": "valorPesoOro:build:production"
             },
             "development": {
-              "browserTarget": "valorPesoOro:build:development"
+              "buildTarget": "valorPesoOro:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "valorPesoOro:build"
+            "buildTarget": "valorPesoOro:build"
           }
         },
         "test": {
