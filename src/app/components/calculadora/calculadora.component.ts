@@ -6,12 +6,10 @@ import { NumericDirective } from 'src/app/directivas/numeric.directive';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-calculadora',
-  standalone: true,
-  imports: [CommonModule, NumericDirective, FormsModule],
-  templateUrl: './calculadora.component.html',
-  styles: [
-  ]
+    selector: 'app-calculadora',
+    imports: [CommonModule, NumericDirective, FormsModule],
+    templateUrl: './calculadora.component.html',
+    styles: []
 })
 export class CalculadoraComponent implements OnInit {
   @Input({ required: true }) dolarValue!: TableRates;

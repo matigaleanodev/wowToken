@@ -4,11 +4,10 @@ import { TableRates } from 'src/app/models/currency.model';
 import { TokenInfo } from 'src/app/models/wow-token.model';
 
 @Component({
-  selector: 'app-table-data',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './table-data.component.html',
-  styles: [],
+    selector: 'app-table-data',
+    imports: [CommonModule],
+    templateUrl: './table-data.component.html',
+    styles: []
 })
 export class TableDataComponent implements OnInit {
   @Input({ required: true }) dolarValue!: TableRates;

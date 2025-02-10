@@ -11,7 +11,6 @@ import { CalculadoraComponent } from "./components/calculadora/calculadora.compo
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
     styles: [],
     imports: [CommonModule, TableDataComponent, SpinnerComponent, NgOptimizedImage, CalculadoraComponent]
